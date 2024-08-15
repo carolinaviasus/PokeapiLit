@@ -1,0 +1,21 @@
+{
+  "name": "poke-api-pt",
+  "description": "Webcomponent poke-api-pt following open-wc recommendations",
+  "license": "MIT",
+  "author": "poke-api-pt",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "analyze": "cem analyze --litelement",
+    "start": "web-dev-server"
+  },
+  "dependencies": {
+    "lit": "^3.1.4"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.10.3",
+    "@web/dev-server": "^0.4.6",
+    "json-server": "^1.0.0-beta.1"
+  },
+  "customElements": "custom-elements.json"
+}
