@@ -8,6 +8,30 @@ export default css`
       font-family: 'Roboto', sans-serif;
 
     }
+    .listpoke{
+      display: block;
+
+    }
+
+    .evolution {
+        cursor: pointer;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-align: center;
+      }
+      .pokemon img, .evolution img {
+        max-width: 100px;
+        height: auto;
+      }
+      .evolutions {
+        margin-top: 10px;
+      }
+      button {
+        margin-bottom: 20px;
+      }
+
     .container {
       text-align: center;
       background-color: #D4D4F2;
@@ -30,7 +54,7 @@ export default css`
       background: #f9f7fc;
       border-radius: 2px;
       display: inline-block;
-      height: 210px;
+      height: 311px;
       width: 400px;
       margin: 1rem;
       position: relative;
