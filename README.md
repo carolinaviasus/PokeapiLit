@@ -1,62 +1,31 @@
-<p align="center">
-  <img width="200" src="https://open-wc.org/hero.png"></img>
-</p>
+# Proyecto PokeApi con LitElement
 
-## Open-wc Starter App
+Este proyecto utiliza LitElement y JavaScript para crear una interfaz web interactiva para la edición de datos de Pokémon. A continuación, se detallan los pasos para clonar y ejecutar el proyecto localmente.
 
-[![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
+## Requisitos Previos
 
-## Quickstart
+Asegúrate de tener instalados los siguientes programas en tu sistema:
 
-To get started:
+- [Node.js](https://nodejs.org/) (incluye `npm`)
+- [json-server](https://github.com/typicode/json-server)
 
-```bash
-npm init @open-wc
-# requires node 10 & npm 6 or higher
-```
+## Pasos para Ejecutar el Proyecto
 
-## Scripts
+1. Instala las dependencias del proyecto utilizando npm:
 
-- `start` runs your app for development, reloading on file changes
-- `start:build` runs your app after it has been built using the build command
-- `build` builds your app and outputs it in your `dist` directory
-- `test` runs your test suite with Web Test Runner
-- `lint` runs the linter for your project
-- `format` fixes linting and formatting errors
+npm i
 
-## Tooling configs
+ejecutar el Servidor JSON
 
-For most of the tools, the configuration is in the `package.json` to reduce the amount of files in your project.
+2. Para simular una API REST local, usa json-server. En una nueva terminal, ejecuta:
 
-If you customize the configuration a lot, you can consider moving them to individual files.
-<p align="center">
-  <img width="200" src="https://open-wc.org/hero.png"></img>
-</p>
+json-server --watch pokemon.json
+Esto iniciará un servidor JSON en http://localhost:3000 que servirá el archivo pokemon.json.
 
-## Open-wc Starter App
+Iniciar el Proyecto
 
-[![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
+3. En otra terminal, arranca el proyecto con el comando:
 
-## Quickstart
+npm run start
 
-To get started:
-
-```bash
-npm init @open-wc
-# requires node 10 & npm 6 or higher
-```
-
-## Scripts
-
-- `start` runs your app for development, reloading on file changes
-- `start:build` runs your app after it has been built using the build command
-- `build` builds your app and outputs it in your `dist` directory
-- `test` runs your test suite with Web Test Runner
-- `lint` runs the linter for your project
-- `format` fixes linting and formatting errors
-
-## Tooling configs
-
-For most of the tools, the configuration is in the `package.json` to reduce the amount of files in your project.
-
-If you customize the configuration a lot, you can consider moving them to individual files.
+Esto iniciará un servidor de desarrollo para tu aplicación.

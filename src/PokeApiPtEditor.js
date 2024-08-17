@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import style from './styles/PokeApiEditorStyle';
 
 class PokeApiPtEditor extends LitElement {
   static get properties() {
@@ -8,101 +9,12 @@ class PokeApiPtEditor extends LitElement {
     };
   }
 
-  static styles = css`
-    :host {
-      display: block;
-      padding: 16px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    form div {
-      display: flex;
-      flex-direction: column;
-    }
-
-    label {
-      font-weight: bold;
-    }
-
-    input {
-      padding: 8px;
-      font-size: 16px;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    .modal.show {
-      display: flex;
-    }
-
-    .modal-content {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      width: 80%;
-      max-width: 500px;
-      position: relative;
-    }
-
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    .close:hover {
-      color: red;
-    }
-  `;
+  static styles = [style];
 
   constructor() {
     super();
     this.selectedPokemon = null;
     this.isRepeated = false;
-  }
-
-  handleFormSubmit(event) {
-    event.preventDefault();
-    if (this.isRepeated) {
-      this.showModal();
-    } else {
-      this.dispatchEvent(new CustomEvent('edit-cancelled'));
-    }
   }
 
   showModal() {
@@ -147,7 +59,7 @@ class PokeApiPtEditor extends LitElement {
             </div>
             <div>
               <label>Image:</label>
-              <input type="text" .value="${evolution.image}" @input="${e => this.handleInputChange(index, 'image', e)}">
+              <input class='imagen' type="text" .value="${evolution.image}" @input="${e => this.handleInputChange(index, 'image', e)}">
             </div>
           `)}
           <div>
@@ -157,7 +69,6 @@ class PokeApiPtEditor extends LitElement {
           <button type="submit">Save Changes</button>
         </form>
 
-        <!-- Modal Informativo -->
         <div id="info-modal" class="modal">
           <div class="modal-content">
             <span @click="${this.closeModal}" class="close">&times;</span>
