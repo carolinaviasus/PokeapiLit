@@ -6,31 +6,52 @@ export default css`
   :host {
       display: block;
       font-family: 'Roboto', sans-serif;
-
     }
     .listpoke{
       display: block;
-
     }
 
     .evolution {
-        cursor: pointer;
-        margin: 10px;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        text-align: center;
-      }
-      .pokemon img, .evolution img {
-        max-width: 100px;
-        height: auto;
-      }
-      .evolutions {
-        margin-top: 10px;
-      }
-      button {
-        margin-bottom: 20px;
-      }
+      cursor: pointer;
+      margin: 10px;
+      padding: 10px;
+      border: 10px solid #fbfbfb;
+      background-color: #323249;
+      border-radius: 5px;
+      color:#24AA91;
+    }
+    .pokemon img, .evolution img {
+      max-width: 100px;
+      height: auto;
+    }
+    .evolutions {
+      margin-top: 10px;
+      text-align: center;
+    }
+    .evolutions h1{
+      font-size: 50px;
+    }
+    .imagenpokee{
+        border-radius: 10% / 10%;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #01A1A1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 20px;
+      color: #ffffff;
+    }
+    button:hover {
+     background-color: #ffffff;
+     color: #01A1A1;
+    }
+    .imagenpokee img {
+      max-width: 86%;
+      height:250px;
+    }
 
     .container {
       text-align: center;
@@ -38,23 +59,11 @@ export default css`
       margin:20px;
     }
 
-    .noresult  {
-      font-size: 46px; 
-      color: #323249;
-      font-weight: bold;
-      align-content: center;
-      justify-content: center;
-      padding: 20%;
-    }
-    get-data{
-      display: none;
-    }
-
     .card {
       background: #f9f7fc;
       border-radius: 2px;
       display: inline-block;
-      height: 311px;
+      height: 220px;
       width: 400px;
       margin: 1rem;
       position: relative;
@@ -62,12 +71,13 @@ export default css`
       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
       transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
       border-radius: 20px;
+      cursor: pointer;
     }
     .card:hover{
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.24);
     }
     .card img {
-      max-width: 80%;
+      max-width: 86%;
       height:180px;
     }
     .card-content{
@@ -82,18 +92,28 @@ export default css`
       justify-content: center
     }
     .textpoke h2 {
-     margin: 0 0 20px 0; /* Espacio debajo del encabezado */
+      margin: 0 0 20px 0;
       font-size: 26px; 
       text-transform: capitalize;
     }
 
     .textpoke p {
-      margin: 5px 0; /* Espacio entre los pÃ¡rrafos */
+      margin: 5px 0; 
       font-size: 16px; 
     }
    
     .imagenpoke{
-        background-color: #F0F0F3; /* Color lila */
-        border-radius: 30% / 30%; /* Forma de Ã³valo */
+        background-color: #F0F0F3;
+        border-radius: 30% / 30%;
+    }
+    .headerpoke{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 180px;
+      background-color: #323249;
+      margin:0px 0px 50px 0px;
+      font-size: 80px;
+      color: #24AA91;
     }
   `;

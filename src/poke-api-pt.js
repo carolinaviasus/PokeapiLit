@@ -65,12 +65,13 @@ class PokeApiPt extends LitElement {
             @edit-cancelled="${this.handleEditCancelled}">
           </poke-api-pt-editor>
         ` : html`
-          <button @click="${this.startEditing}">Edit Evolutions</button>
-          <button @click="${this.showPokemons}">Back to Pokémon List</button>
-          <h1>${this.selectedPokemon.name}</h1>
-          <p>Type: ${this.selectedPokemon.type}</p>
-          <img src="${this.getImageUrl(this.selectedPokemon.image)}" alt="${this.selectedPokemon.name}">
+          
           <div class="evolutions">
+            <h1>${this.selectedPokemon.name}</h1>
+          <p>Type: ${this.selectedPokemon.type}</p>
+          <div class='imagenpokee'>
+            <img src="${this.getImageUrl(this.selectedPokemon.image)}" alt="${this.selectedPokemon.name}">
+          </div>
             <h2>Evolutions</h2>
             ${this.selectedPokemon.evolutions.map(evolution => html`
               <div class="evolution">
@@ -79,18 +80,24 @@ class PokeApiPt extends LitElement {
                 <img src="${this.getImageUrl(evolution.image)}" alt="${evolution.name}">
               </div>
             `)}
+            <button @click="${this.startEditing}">Edit Evolutions</button>
+            <button @click="${this.showPokemons}">Back to Pokémon List</button>
           </div>
         `}
       ` : html`
-        <h1>Pokémon List</h1>
+        <h1 class='headerpoke'>Pokémon</h1>
         ${this.pokemons.map(pokemon => html`
-          <div class='card'>
-            <div class="pokemon" @click="${() => this.showEvolutions(pokemon)}">
-              <h2>${pokemon.name}</h2>
-              <p>Type: ${pokemon.type}</p>
-              <img src="${this.getImageUrl(pokemon.image)}" alt="${pokemon.name}">
+            <div class="card" @click="${() => this.showEvolutions(pokemon)}">
+              <div class="card-content"> 
+                <div class='imagenpoke'>
+                  <img src="${this.getImageUrl(pokemon.image)}" alt="${pokemon.name}">
+                </div>
+                <div class="textpoke">
+                  <h2>${pokemon.name}</h2>
+                  <p>Type: ${pokemon.type}</p>
+                </div>
+              </div>
             </div>
-          </div>
         `)}
       `}
     `;
