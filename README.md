@@ -7,6 +7,7 @@ Este proyecto utiliza LitElement y JavaScript para crear una interfaz web intera
 Asegúrate de tener instalados los siguientes programas en tu sistema:
 
 - [Node.js](https://nodejs.org/) (incluye `npm`)
+  v20.16.0
 - [json-server](https://github.com/typicode/json-server)
 
 ## Pasos para Ejecutar el Proyecto
