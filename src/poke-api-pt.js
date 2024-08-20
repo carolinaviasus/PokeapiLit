@@ -40,7 +40,7 @@ class PokeApiPt extends LitElement {
 
   showEvolutions(pokemon) {
     this.selectedPokemon = pokemon;
-    this.isEditing = false; // Ensure we are not in edit mode
+    this.isEditing = false;
   }
 
   startEditing() {

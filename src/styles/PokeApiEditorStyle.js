@@ -79,7 +79,7 @@ export default css`
     }
 
     .modal-content p{
-        justify-content: center;
+      justify-content: center;
       display:flex;
       text-align: center;
       font-size: 29px;
@@ -99,5 +99,4 @@ export default css`
     .imagen{
         margin:0px 0px 40px 0px;
     }
-  
   `

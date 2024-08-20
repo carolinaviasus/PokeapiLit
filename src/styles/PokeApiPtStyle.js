@@ -103,8 +103,8 @@ export default css`
     }
    
     .imagenpoke{
-        background-color: #F0F0F3;
-        border-radius: 30% / 30%;
+      background-color: #F0F0F3;
+      border-radius: 30% / 30%;
     }
     .headerpoke{
       display: flex;
