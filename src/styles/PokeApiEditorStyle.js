@@ -1,11 +1,10 @@
 import { css } from "lit";
 
 export default css`
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
   :host {
       display: block;
       padding: 16px;
+      font-family: 'Roboto', sans-serif;
     }
 
     form {

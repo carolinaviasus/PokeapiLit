@@ -9,7 +9,9 @@ class PokeApiPtEditor extends LitElement {
     };
   }
 
-  static styles = [style];
+  static styles = css`
+    ${style}
+  `;
 
   constructor() {
     super();
