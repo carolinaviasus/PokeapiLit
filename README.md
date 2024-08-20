@@ -1,6 +1,6 @@
 # Proyecto PokeApi con LitElement
 
-Este proyecto utiliza LitElement y JavaScript para crear una interfaz web interactiva para la edición de datos de Pokémon. A continuación, se detallan los pasos para clonar y ejecutar el proyecto localmente.
+Este proyecto utiliza LitElement y JavaScript para crear una interfaz web interactiva que lista algunos pokemones de una archivo json y ademas permite la edición de datos de Pokémon. A continuación, se detallan los pasos para clonar y ejecutar el proyecto localmente.
 
 ## Requisitos Previos
 

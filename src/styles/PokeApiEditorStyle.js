@@ -46,6 +46,16 @@ export default css`
      color: #01A1A1;
     }
 
+    .back {
+      padding: 10px 20px;
+      background-color: #000303;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 20px;
+      color: #ffffff;
+    }
     .modal {
       display: none;
       position: fixed;

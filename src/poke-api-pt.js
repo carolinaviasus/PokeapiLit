@@ -80,8 +80,8 @@ class PokeApiPt extends LitElement {
                 <img src="${this.getImageUrl(evolution.image)}" alt="${evolution.name}">
               </div>
             `)}
+            <button class= 'back' @click="${this.showPokemons}">Back to Pokémon List</button>
             <button @click="${this.startEditing}">Edit Evolutions</button>
-            <button @click="${this.showPokemons}">Back to Pokémon List</button>
           </div>
         `}
       ` : html`

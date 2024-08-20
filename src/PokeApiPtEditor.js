@@ -44,7 +44,7 @@ class PokeApiPtEditor extends LitElement {
   render() {
     if (this.selectedPokemon) {
       return html`
-        <button @click="${() => this.dispatchEvent(new CustomEvent('edit-cancelled'))}">
+        <button class= 'back' @click="${() => this.dispatchEvent(new CustomEvent('edit-cancelled'))}">
           Cancel Edit
         </button>
 

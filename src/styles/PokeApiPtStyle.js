@@ -46,6 +46,16 @@ export default css`
      background-color: #ffffff;
      color: #01A1A1;
     }
+    .back {
+      padding: 10px 20px;
+      background-color: #000303;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 20px;
+      color: #ffffff;
+    }
     .imagenpokee img {
       max-width: 86%;
       height:250px;
