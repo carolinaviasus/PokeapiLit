@@ -83,8 +83,8 @@ class PokeApiPtEditor extends LitElement {
               <input class='imagen' type="text" .value="${evolution.image}" @input="${e => this.handleInputChange(index, 'image', e)}">
             </div>
           `)}
-          <div>
-            <label>Repeated Pokémon:</label>
+          <div class="checkbox-container">
+            <label>Repeated Pokémon?</label>
             <input type="checkbox" .checked="${this.isRepeated}" @change="${this.handleCheckboxChange}">
           </div>
           <button type="submit" @click="${() => Router.go('/home') }">Save Changes</button>

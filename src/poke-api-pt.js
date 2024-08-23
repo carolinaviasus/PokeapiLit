@@ -112,8 +112,13 @@ class PokeApiPt extends LitElement {
           </div>
         `}
       ` : html`
-        <h1 class='headerpoke'>Pokémon</h1>
-        ${this.pokemons.map(pokemon => html`
+        <div class="header-container">
+          <h1 class="headerpoke">Pokémon</h1>
+          <img src="assets/pokemon/images-removebg-preview.png" alt="Pokémon Logo" class="header-image">
+          
+        </div>
+        <div class="card-container">
+         ${this.pokemons.map(pokemon => html`
           <div class="card" @click="${() => this.showEvolutions(pokemon)}">
             <div class="card-content"> 
               <div class='imagenpoke'>
@@ -126,6 +131,7 @@ class PokeApiPt extends LitElement {
             </div>
           </div>
         `)}
+        </div>
       `}
     `;
   }

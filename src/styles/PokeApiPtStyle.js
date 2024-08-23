@@ -10,8 +10,7 @@ export default css`
     }
 
     .evolution {
-      cursor: pointer;
-      margin: 10px;
+      margin: 15px 90px 15px 90px;
       padding: 10px;
       border: 10px solid #fbfbfb;
       background-color: #323249;
@@ -63,8 +62,12 @@ export default css`
 
     .container {
       text-align: center;
-      background-color: #D4D4F2;
+      /* background-color: #D4D4F2; */
+      background-image: url('assets/pokemon/pokebola.png'); 
       margin:20px;
+      background-blend-mode: overlay; 
+      background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+      background-position: center; 
     }
 
     .card {
@@ -93,6 +96,13 @@ export default css`
       align-items: center;
       justify-content: space-around;
       margin: 1rem;
+    }
+    .card-container{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px; /* Espaciado entre tarjetas */
+      justify-content: center; /* Centra las tarjetas en el contenedor */
+      padding: 16px; 
     }
     .textpoke {
       display: flex;
@@ -123,5 +133,43 @@ export default css`
       margin:0px 0px 50px 0px;
       font-size: 80px;
       color: #24AA91;
+    }
+    .header-container {
+      display: flex;
+      align-items: center; /* Alinea verticalmente al centro */
+      justify-content: center; /* Alinea horizontalmente al centro, si deseas */
+      gap: 10px; /* Espacio entre la imagen y el texto */
+      background-color: #323249;
+      margin: 0; 
+    }
+
+    .header-image {
+      height: 133px; /* Ajusta el tamaño de la imagen según sea necesario */
+      width: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    .headerpoke {
+      font-size: 6rem; /* Tamaño del texto */
+      margin: 0; /* Elimina márgenes predeterminados */
+    }
+    @media (max-width: 425px) {
+      .header-container {
+        display: flex;
+        align-items: center; /* Alinea verticalmente al centro */
+        justify-content: center; /* Alinea horizontalmente al centro, si deseas */
+        gap: 0px; /* Espacio entre la imagen y el texto */
+        background-color: #323249;
+        margin: 0; 
+      }
+
+      .header-image {
+        height: 94px; /* Ajusta el tamaño de la imagen según sea necesario */
+        width: auto; /* Mantiene la proporción de la imagen */
+      }
+
+      .headerpoke {
+        font-size: 3rem; /* Tamaño del texto */
+        margin: 0; /* Elimina márgenes predeterminados */
+      }
     }
   `;
